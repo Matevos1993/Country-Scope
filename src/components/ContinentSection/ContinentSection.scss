@@ -1,0 +1,79 @@
+.continent-section {
+  padding: 40px 0;
+  color: #fff;
+
+  .sec-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+
+  .country-details {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .countryList {
+    position: sticky;
+    left: 0;
+    top: 0;
+    height: calc(100vh - 140px);
+    overflow-y: auto;
+    box-shadow: 2px 0 0 #000;
+  }
+
+  .countryBtn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  h2 {
+    font-weight: 200;
+  }
+
+  button {
+    position: relative;
+    background: none;
+    border: 0;
+    color: inherit;
+    padding: 10px 20px 10px 0;
+    margin-top: 4px;
+    width: 300px;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &::after {
+      content: "";
+      position: absolute;
+      height: 2px;
+      width: 0;
+      background: #bbb;
+      bottom: 0;
+      left: 0;
+      transition: inherit;
+    }
+
+    &:hover {
+      color: #bbb;
+
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .country-details {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 400px) {
+  .continent-section button {
+    width: 260px;
+  }
+}
